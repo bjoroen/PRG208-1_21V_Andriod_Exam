@@ -42,4 +42,10 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.android.support:cardview-v7:27.1.1'
+    implementation 'com.google.android.support:design-v7:27.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
 }
