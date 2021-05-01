@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.firstCoin.observe(this){ coin ->
             binding.mainScreenText.text = coin.id
-            Glide.with(this).load(coin.symbol).into(binding.image)
+            //Glide.with(this).load(coin.symbol).into(binding.image)
 
         }
 

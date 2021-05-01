@@ -6,11 +6,13 @@ import no.kristiania.prg208_1_21v_andriod_exam.model.Coin
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-private val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+private val moshi = Moshi.Builder()
+    .add(KotlinJsonAdapterFactory())
+    .build()
 
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
-    .baseUrl("https://api.coincap.io")
+    .baseUrl("https://api.coincap.io/")
     .build()
 
 object API {

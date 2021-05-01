@@ -19,20 +19,28 @@ class MainViewModel: ViewModel() {
     val firstCoin : LiveData<Coin> get() =_firstCoin
 
 
-    val error =MutableLiveData<Boolean>()
+    val error = MutableLiveData<Boolean>()
 
     init {
      loadCoinCap()
     }
-    fun loadCoinCap () {
+
+/*    fun loadCoinCap () {
         viewModelScope.launch(Dispatchers.IO + CoroutineExceptionHandler{_,exception ->
             error.postValue(true)})
         {
             val coin = coinCapService.getAllCoins()
             _firstCoin.postValue(coin[0])
         }
+    }*/
+
+    fun loadCoinCap(){
+        viewModelScope.launch(Dispatchers.IO){
+            val coin = coinCapService.getAllCoins()
+            _firstCoin.postValue(coin[0])
+        }
     }
 
 
-        }
+}
 
