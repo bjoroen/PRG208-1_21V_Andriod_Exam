@@ -12,7 +12,7 @@ private val moshi = Moshi.Builder()
 
 private val retrofit = Retrofit.Builder()
     .addConverterFactory(MoshiConverterFactory.create(moshi))
-    .baseUrl("https://api.coincap.io/")
+    .baseUrl("https://api.coincap.io/v2/assets")
     .build()
 
 object API {

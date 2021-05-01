@@ -13,7 +13,9 @@ interface CoinCapService {
     @GET("v2/assets")
     suspend fun getAllCoins(): List<Coin>
 
-    
+
+
+
 
 
 }
