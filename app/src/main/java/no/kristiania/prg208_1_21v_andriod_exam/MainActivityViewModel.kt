@@ -10,7 +10,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
-class MainViewModel: ViewModel() {
+class MainActivityViewModel: ViewModel() {
 
     /*val coinCapService = API.coinCapService*/
 
